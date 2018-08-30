@@ -23,8 +23,11 @@
     navigator.geolocation.getCurrentPosition(pos => {
       document.body.innerHTML += pos.coords.longitude;
     })
-    window.open('https://magenta-wellness.com/evoucher/login', '_self', 
-'location=yes');
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+        window.open = cordova.InAppBrowser.open;
+        window.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');
+    }
   </script>
 </body>
 </html>
