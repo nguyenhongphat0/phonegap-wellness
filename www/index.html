@@ -20,6 +20,7 @@
   <iframe src="https://magenta-wellness.com/evoucher/login" frameborder="0"></iframe>
 
   <script>
+    cordova.InAppBrowser.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');
     navigator.geolocation.getCurrentPosition(pos => {
       document.body.innerHTML += pos.coords.longitude;
     })
