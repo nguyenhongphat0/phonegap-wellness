@@ -19,15 +19,18 @@
 <body>
   <iframe src="https://magenta-wellness.com/evoucher/login" frameborder="0"></iframe>
 
-  <script>
-    cordova.InAppBrowser.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');
+  <button onclick="cordova.InAppBrowser.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');">inappbrowser</button>
+  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');">window.open</button>
+  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_self', 'location=yes');">self</button>
+  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_system', 'location=yes');">system</button>
+
+  <script>  
     navigator.geolocation.getCurrentPosition(pos => {
       document.body.innerHTML += pos.coords.longitude;
     })
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
         window.open = cordova.InAppBrowser.open;
-        window.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');
     }
   </script>
 </body>
