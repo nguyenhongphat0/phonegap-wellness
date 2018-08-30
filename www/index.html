@@ -6,32 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wellness</title>
   <style>
-    /* body {
-      margin: 0px;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
-      height: 100vh;
-    } */
   </style>
 </head>
 <body>
-  <iframe src="https://magenta-wellness.com/evoucher/login" frameborder="0"></iframe>
-
-  <button onclick="cordova.InAppBrowser.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');">inappbrowser</button>
-  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');">window.open</button>
-  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_self', 'location=yes');">self</button>
-  <button onclick="window.open('https://magenta-wellness.com/evoucher/login', '_system', 'location=yes');">system</button>
-
-  <script>  
-    navigator.geolocation.getCurrentPosition(pos => {
-      document.body.innerHTML += pos.coords.longitude;
-    })
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        window.open = cordova.InAppBrowser.open;
-    }
+  <script>
+    window.open('https://magenta-wellness.com/evoucher/login', '_blank', 'location=yes');
+    // document.addEventListener("deviceready", onDeviceReady, false);
+    // function onDeviceReady() {
+    //     window.open = cordova.InAppBrowser.open;
+    // }
   </script>
 </body>
 </html>
